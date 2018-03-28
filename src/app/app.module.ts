@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MapDisplayComponent } from './map-display/map-display.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MapDisplayComponent
   ],
   imports: [
     BrowserModule
