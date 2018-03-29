@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Map } from '../models/map.model';
+import { Map, Tile } from '../models/map.model';
 
 @Component({
   selector: 'app-map-edit',
@@ -10,5 +10,9 @@ export class MapEditComponent{
 
   constructor() { }
   @Input() map: Map;
-  @Output() clickSender = new EventEmitter();
+
+  tileClicked(tile: Tile){
+    tile.blocked = !tile.blocked;
+    console.log(this.map);
+  }
 }

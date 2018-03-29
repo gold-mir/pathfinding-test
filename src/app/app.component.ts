@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'app';
   public map: Map;
   constructor(){
-    this.map = new Map(32, 32);
+    this.map = new Map(16, 16);
     let map = this.map;
     console.log(map.tilesGrid);
     let tiles = map.tilesGrid;

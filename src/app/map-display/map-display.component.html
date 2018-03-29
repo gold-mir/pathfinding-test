@@ -1,1 +1,6 @@
-<app-tile *ngFor="let tile of map.getAllTiles()" [tile]="tile"></app-tile>
+<div *ngFor="let tile of map.getAllTiles()"
+class="grid-tile"
+[ngStyle]="getPositionData(tile)"
+(click)="sendTileClick(tile)"
+[class]="getClassData(tile)">
+</div>
