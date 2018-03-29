@@ -1,3 +1,5 @@
+import { Point } from './point.model';
+
 export class Map {
 
   //tilesGrid saved as [row][column]
@@ -49,7 +51,7 @@ export class Map {
 }
 
 export class Tile {
-  public pos;
+  public pos: Point;
   public adjacent: Tile[] = [];
   public travelCost: number = 1;
   constructor(posx: number, posy:number, public blocked: boolean = false){

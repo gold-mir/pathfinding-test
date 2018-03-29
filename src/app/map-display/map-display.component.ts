@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Map } from '../models/map.model';
 
 @Component({
   selector: 'app-map-display',
   templateUrl: './map-display.component.html',
   styleUrls: ['./map-display.component.css']
 })
-export class MapDisplayComponent implements OnInit {
+export class MapDisplayComponent {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  @Input() map: Map;
 }

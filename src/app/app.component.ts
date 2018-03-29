@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Map, Tile } from './models/map.model';
+import { Point } from './models/point.model';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +9,10 @@ import { Map, Tile } from './models/map.model';
 })
 export class AppComponent {
   title = 'app';
-
+  public map: Map;
   constructor(){
-    let map: Map = new Map(8, 8);
+    this.map = new Map(32, 32);
+    let map = this.map;
     console.log(map.tilesGrid);
     let tiles = map.tilesGrid;
     for(let x = 0; x < tiles.length; x++){
